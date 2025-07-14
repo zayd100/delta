@@ -1,0 +1,36 @@
+/* FileUpload.css */
+.file-upload-container {
+  margin-bottom: 1rem;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file-input {
+  margin-bottom: 0.5rem;
+}
+
+.upload-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #2563eb;
+}
+
+.message-text {
+  margin-top: 0.5rem;
+}
+
+/* GeneChart.css */
+.chart-container {
+  margin-top: 1rem;
+}
