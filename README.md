@@ -5,7 +5,7 @@
 ````markdown
 # 📊 Custom Data Visualize Dashboard
 
-A simple MERN (MongoDB, Express, React, Node.js) application for uploading CSV files, storing their data in MongoDB, uploading the original file to AWS S3, and visually displaying the parsed data using interactive bar charts.
+A simple MERN (MongoDB, Express, React, Node.js) application for uploading CSV files, storing their data in MongoDB, uploading the original file to AWS S3, and visually displaying the parsed data using interactive bar charts. Change and update the code to match your own csv files. This code is made for the 'organizations-1000.csv' in the root directory. 
 
 
 
@@ -36,7 +36,7 @@ A simple MERN (MongoDB, Express, React, Node.js) application for uploading CSV f
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/zayd100/delta-viz.git
+git clone https://github.com/zayd100/delta.git
 cd delta-viz
 ````
 
@@ -124,8 +124,8 @@ npm run dev
 │   ├── routes/
 │   │   └── data.js
 │   └── index.js
-├── assets/
-│   └── prev.png
+├── organizations-1000.csv
+│   
 ├── .env (not committed)
 └── README.md
 ```
@@ -138,6 +138,7 @@ npm run dev
 * Add CSV template validator
 * Add user authentication (optional)
 * Add search/sort/filter functionality to chart
+* Add AI 'summary'
 
 ---
 
