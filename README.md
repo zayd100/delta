@@ -4,7 +4,8 @@
 
 ## Overview
 
-A comprehensive business analytics dashboard that processes CSV data, visualizes it through interactive charts, and stores it in MongoDB with S3 archiving capabilities. This MERN stack application is designed to help businesses analyze company data across industries and regions.
+Delta is a full-stack business intelligence platform that processes CSV data (default format included in the repo), visualizes it through interactive dashboards, and stores structured data in MongoDB with S3 archiving. While pre-designed for the sample dataset (companies with fields like name, country, employees, etc.), the system is modular—users can adapt the parser and dashboard to their own CSV formats by modifying the schema and visualization logic. Built on the MERN stack with AWS S3 integration, it’s designed for rapid deployment as a scalable analytics MVP.
+
 
 ## Key Features
 
