@@ -3,6 +3,7 @@
 ---
 ![Preview](prev.png)
 ````markdown
+
 # 📊 Custom Data Visualize Dashboard
 
 (MongoDB, Express, React, Node.js) application for uploading CSV files, storing their data in MongoDB, uploading the original file to AWS S3, and visually displaying the parsed data using interactive bar charts. Change and update the code to match your own csv files. This code is made for the 'organizations-1000.csv' in the root directory. 
@@ -129,7 +130,7 @@ npm run dev
 ├── .env (not committed)
 └── README.md
 ```
-
+Built with the help of Claude.
 ---
 
 ## 📌 TODO / Future Improvements
