@@ -110,5 +110,3 @@ This project was developed with some assistance from AI tools to:
 
 The core logic, design, and implementation remain human-crafted with AI serving in an advisory capacity.
 
-
-**Note**: The actual GitHub repository link, AWS credentials, and MongoDB connection strings should be configured according to your specific deployment setup.
