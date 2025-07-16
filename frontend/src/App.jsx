@@ -4,6 +4,7 @@ import GeneChart from './components/Genechart';
 import './index.css';
 import './styles/FileUpload.css';
 import BusinessAnalyticsDashboard from './components/ba'
+import './styles/dash.css'
 function App() {
   return (
     <div>

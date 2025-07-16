@@ -1,151 +1,114 @@
+# Introducing Delta
 
+![Dashboard Preview](prev.png)
 
----
-![Preview](prev.png)
-````markdown
+## Overview
 
-# 📊 Custom Data Visualize Dashboard
+A comprehensive business analytics dashboard that processes CSV data, visualizes it through interactive charts, and stores it in MongoDB with S3 archiving capabilities. This MERN stack application is designed to help businesses analyze company data across industries and regions.
 
-(MongoDB, Express, React, Node.js) application for uploading CSV files, storing their data in MongoDB, uploading the original file to AWS S3, and visually displaying the parsed data using interactive bar charts. Change and update the code to match your own csv files. This code is made for the 'organizations-1000.csv' in the root directory. 
+## Key Features
 
+- **CSV Data Processing**: Parses uploaded CSV files into JSON format
+- **Interactive Visualizations**: Multiple chart types (bar, pie, line, scatter)
+- **MongoDB Integration**: Stores processed data for persistent access
+- **AWS S3 Archiving**: Securely archives original CSV uploads
+- **Responsive Dashboard**: Clean, modern UI with multiple analysis views
 
+## Preview Images
 
+| View | Preview |
+|------|---------|
+| Overview | ![Overview](./demo-images/va.png) |
+| Companies | ![Companies](./demo-images/company.png) |
+| Industries | ![Industries](./demo-images/industry.png) |
+| Timeline | ![Timeline](./demo-images/timeline.png) |
+| Timeline | ![Countries](./demo-images/country.png) |
 
----
+## Technology Stack
 
-## 🧠 Features
+### Frontend
+- React.js
+- Vite (for fast development builds)
+- Recharts (data visualization)
+- Lucide React (icons)
+- Tailwind CSS (styling)
 
-- Upload `.csv` files from the frontend
-- Parse CSV rows and store data in MongoDB Atlas
-- Automatically upload the original CSV to an S3 bucket
-- Visualize organization data (e.g., employee counts) using Recharts
-- Fully local setup (nothing deployed yet)
+### Backend
+- Node.js
+- Express.js
+- MongoDB (database)
+- Mongoose (ODM)
+- AWS SDK (S3 integration)
+- CSV parser
 
----
+## Installation
 
-## 🏗️ Tech Stack
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zayd100/delta-viz.git
+   cd delta-viz
+   ```
 
-- **Frontend**: React, Axios, Recharts
-- **Backend**: Express, Node.js, Multer, csv-parser, AWS SDK
-- **Database**: MongoDB Atlas (cloud MongoDB)
-- **Storage**: AWS S3 (for saving uploaded files)
+2. Install dependencies for both frontend and backend:
+   ```bash
+   # Frontend
+   cd frontend
+   npm install
 
----
+   # Backend
+   cd ../backend
+   npm install
+   ```
 
-##  Getting Started
+3. Set up environment variables:
+   - Create `.env` files in both frontend and backend directories
+   - Include MongoDB connection string and AWS S3 credentials in backend `.env`
 
-### 1. Clone the repository
+4. Start the development servers:
+   ```bash
+   # In frontend directory
+   npm run dev
 
-```bash
-git clone https://github.com/zayd100/delta.git
-cd delta-viz
-````
+   # In backend directory
+   npm start
+   ```
 
-### 2. Install dependencies
+## Usage
 
-#### Backend
+1. Upload a CSV file with company data through the web interface
+2. The system will:
+   - Parse the CSV into JSON format
+   - Store the processed data in MongoDB
+   - Archive the original CSV in AWS S3
+3. Explore the data through the interactive dashboard views:
+   - Overview: Key metrics and highlights
+   - Countries: Analysis by geographic region
+   - Industries: Sector-based insights
+   - Companies: Individual company performance
+   - Timeline: Historical trends
 
-```bash
-cd backend
-npm install
+## Expected CSV Format
+
+The application expects CSV files with the following columns:
+- `name`: Company name
+- `country`: Country of operation
+- `industry`: Industry sector
+- `number_of_employees`: Employee count
+- `founded`: Year founded
+
+Example row:
+```
+"Liu-Hoover","Western Sahara","Online Publishing",6852,1980
 ```
 
-#### Frontend
+## Acknowledgments
 
-```bash
-cd frontend
-npm install
-```
+This project was developed with some assistance from AI tools to:
+- Optimize certain code segments
+- Generate documentation
+- Suggest architectural improvements
 
-### 3. Environment Setup
+The core logic, design, and implementation remain human-crafted with AI serving in an advisory capacity.
 
-Create a `.env` file in the `backend/` directory:
 
-```env
-MONGO_URI=your_mongodb_connection_string
-AWS_ACCESS_KEY_ID=your_aws_access_key
-AWS_SECRET_ACCESS_KEY=your_aws_secret_key
-AWS_REGION=your_aws_region (e.g., us-east-1)
-AWS_S3_BUCKET_NAME=your_s3_bucket_name
-```
-
-> 🔒 Make sure you do **not** commit `.env` to GitHub.
-
----
-
-## 🧪 Run Locally
-
-### Start Backend
-
-```bash
-cd backend
-npm start
-```
-
-### Start Frontend 
-
-```bash
-cd frontend
-npm run dev
-```
-
----
-
-## 📝 How It Works
-
-* Visit `http://localhost:3000`
-* Upload a `.csv` file containing organization data (a sample CSV is in the root directory)
-* Backend:
-
-  * Parses CSV rows
-  * Saves data to MongoDB
-  * Uploads the CSV file to S3
-* Frontend:
-
-  * Fetches parsed data from backend
-  * Displays it in an interactive bar chart
-
----
-
-## 📂 Project Structure
-
-```
-├── frontend/
-│   ├── components/
-│   │   ├── FileUpload.jsx
-│   │   └── GeneChart.jsx
-│   ├── styles/
-│   │   └── fileupload.css
-        └── genechart.css
-│   ├── index.css
-│   └── App.jsx
-├── backend/
-│   ├── models/
-│   │   └── OrganizationData.js
-│   ├── routes/
-│   │   └── data.js
-│   └── index.js
-├── organizations-1000.csv
-│   
-├── .env (not committed)
-└── README.md
-```
-Built with the help of Claude.
----
-
-## 📌 TODO / Future Improvements
-
-* Add deployment (e.g., Vercel + Render/Railway)
-* Add CSV template validator
-* Add user authentication (optional)
-* Add search/sort/filter functionality to chart
-* Add AI 'summary'
-
----
-
-## 🛡️ License
-
-MIT License. Feel free to use and extend this project.
-
----
-
+**Note**: The actual GitHub repository link, AWS credentials, and MongoDB connection strings should be configured according to your specific deployment setup.

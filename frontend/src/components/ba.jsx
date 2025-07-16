@@ -469,10 +469,7 @@ const BusinessAnalyticsDashboard = () => {
             <p className="header-subtitle">Comprehensive analysis of company data across industries and regions</p>
           </div>
           <div className="header-actions">
-            <button className="export-button">
-              <Download className="export-icon" />
-              Export Data
-            </button>
+         
           </div>
         </div>
       </div>
