@@ -32,7 +32,6 @@ Delta is a full-stack business intelligence platform that processes CSV data (de
 - Vite (for fast development builds)
 - Recharts (data visualization)
 - Lucide React (icons)
-- Tailwind CSS (styling)
 
 ### Backend
 - Node.js
