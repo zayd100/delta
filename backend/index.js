@@ -15,5 +15,5 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => console.log('done!!! MongoDB connected to Atlas'))
 .catch(err => console.error('error!! MongoDB error:', err));
-
+//running on your local machine.
 app.listen(5000, () => console.log('🚀 Server running on port 5000'));
